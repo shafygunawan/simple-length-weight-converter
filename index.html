@@ -1,0 +1,190 @@
+<!--!
+ * Simple Length Weight Converter (https://shafygunawan.github.io/simple-length-weight-converter)
+ * Copyright 2022 Shafy Gunawan (https://www.linkedin.com/in/shafygunawan/)
+ * Licensed under MIT (https://github.com/shafygunawan/simple-length-weight-converter/blob/main/LICENSE)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Length Weight Converter</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <h1 class="text-center mb-5">Unit Conversion</h1>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="length-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#length-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="length-tab-pane"
+                aria-selected="true"
+              >
+                Length
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="weight-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#weight-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="weight-tab-pane"
+                aria-selected="false"
+              >
+                Weight
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="length-tab-pane"
+              role="tabpanel"
+              aria-labelledby="length-tab"
+              tabindex="0"
+            >
+              <form class="py-5" data-form="length">
+                <h2 class="h4 mb-4">Length unit conversion</h2>
+                <div class="mb-3">
+                  <label for="length-from" class="form-label"
+                    >Initial Unit:</label
+                  >
+                  <select
+                    id="length-from"
+                    class="form-select"
+                    aria-label="From unit select"
+                    required
+                    name="from"
+                  >
+                    <option selected disabled value="">Select the unit</option>
+                    <option value="km">Kilometer (km)</option>
+                    <option value="hm">Hektometer (hm)</option>
+                    <option value="dam">Dekameter (dam)</option>
+                    <option value="m">Meter (m)</option>
+                    <option value="dm">Desimeter (dm)</option>
+                    <option value="cm">Centimeter (cm)</option>
+                    <option value="mm">Milimeter (mm)</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="length-to" class="form-label">End Unit:</label>
+                  <select
+                    id="length-to"
+                    class="form-select"
+                    aria-label="To unit select"
+                    required
+                    name="to"
+                  >
+                    <option selected disabled value="">Select the unit</option>
+                    <option value="km">Kilometer (km)</option>
+                    <option value="hm">Hektometer (hm)</option>
+                    <option value="dam">Dekameter (dam)</option>
+                    <option value="m">Meter (m)</option>
+                    <option value="dm">Desimeter (dm)</option>
+                    <option value="cm">Centimeter (cm)</option>
+                    <option value="mm">Milimeter (mm)</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="length-number" class="form-label"
+                    >Value to be Converted:</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="length-number"
+                    required
+                    name="number"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">
+                  Convert
+                </button>
+              </form>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="weight-tab-pane"
+              role="tabpanel"
+              aria-labelledby="weight-tab"
+              tabindex="0"
+            >
+              <form class="py-5" data-form="weight">
+                <h2 class="h4 mb-4">Weight unit conversion</h2>
+                <div class="mb-3">
+                  <label for="weight-from" class="form-label"
+                    >Initial Unit:</label
+                  >
+                  <select
+                    id="weight-from"
+                    class="form-select"
+                    aria-label="From unit select"
+                    required
+                    name="from"
+                  >
+                    <option selected disabled value="">Select the unit</option>
+                    <option value="kg">Kilogram (kg)</option>
+                    <option value="hg">Hektogram (hg)</option>
+                    <option value="dag">Dekagram (dag)</option>
+                    <option value="g">Gram (g)</option>
+                    <option value="dg">Desigram (dg)</option>
+                    <option value="cg">Centigram (cg)</option>
+                    <option value="mg">Miligram (mg)</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="weight-to" class="form-label">End Unit:</label>
+                  <select
+                    id="weight-to"
+                    class="form-select"
+                    aria-label="To unit select"
+                    required
+                    name="to"
+                  >
+                    <option selected disabled value="">Select the unit</option>
+                    <option value="kg">Kilogram (kg)</option>
+                    <option value="hg">Hektogram (hg)</option>
+                    <option value="dag">Dekagram (dag)</option>
+                    <option value="g">Gram (g)</option>
+                    <option value="dg">Desigram (dg)</option>
+                    <option value="cg">Centigram (cg)</option>
+                    <option value="mg">Miligram (mg)</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="weight-number" class="form-label"
+                    >Value to be Converted:</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="weight-number"
+                    required
+                    name="number"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">
+                  Convert
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
